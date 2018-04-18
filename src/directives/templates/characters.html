@@ -1,9 +1,21 @@
 <div class="container">
     <div class="row">
-        <div class="item-content col-sm-2" ng-repeat="character in characters">
+        <div class="item-content col-sm-4" ng-repeat="character in characters">
+            <img  class="content-img" ng-src="../../../assets/{{character.name}}.jpg">
             <p>Name: {{character.name}}</p>
+            <p>Birthyear: {{character.birth_year}}</p>
             <p>Height: {{character.height}}</p>
             <p>Mass: {{character.mass}}</p>
+            <p>Eye Color: {{captalize(character.eye_color)}}</p>
+            <p>Appears On:</p>
+            <ul ng-repeat="movie in character.movies">
+                <li>
+                    <p>{{movie.title}} ({{getYearRelease(movie)}})</p>
+                    <p>Director: {{movie.director}}</p>
+                    <p>Producer: {{movie.producer}}</p>
+                </li>
+            </ul>
+            <span class="item-footer">Last Update: {{character.edited ? getFormattedDate(character.edited, 'lll') : getFormattedDate(character.created, 'lll')}}</span>
         </div>
     </div>
 </div>

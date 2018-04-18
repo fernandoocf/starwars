@@ -1,7 +1,13 @@
 <div class="container">
     <div class="row">
-        <div class="item-content col-sm-2" ng-repeat="planet in planets">
+        <div class="item-content col-sm-4" ng-repeat="planet in planets">
+            <img  class="content-img" ng-src="../../../assets/{{planet.name}}.jpg">
             <p>Name: {{planet.name}}</p>
+            <p>Climate: {{captalize(planet.climate)}}</p>
+            <p>Terrain: {{captalize(planet.terrain)}}</p>
+            <p>Rotation Period: {{planet.rotation_period}}</p>
+            <p>Gravity: {{planet.gravity}}</p>
+            <span class="item-footer">Last Update: {{planet.edited ? getFormattedDate(planet.edited, 'lll') : getFormattedDate(planet.created, 'lll')}}</span>
         </div>
     </div>
 </div>

@@ -21,16 +21,10 @@
                     url: apiRoot + 'planets/' + charId
                 });
             },
-            getStarships: function (charId) {
+            genericGet: function (url) {
                 return $http({
-                    method: 'GET',
-                    url: apiRoot + 'starships/' + charId
-                });
-            },
-            getFilms: function (charId) {
-                return $http({
-                    method: 'GET',
-                    url: apiRoot + 'people/' + charId
+                   method: 'GET',
+                   url: url
                 });
             }
         }

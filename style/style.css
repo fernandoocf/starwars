@@ -16,10 +16,26 @@ body {
     font-size: 28px;
 }
 
+.item-footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+    font-style: italic;
+    color: #d3d3d3;
+    right: 10px;
+}
+
 .item-content {
     margin: 20px auto;
     padding: 15px;
-    background-color: #7B7C82;
+    background-color: #303030;
     border-radius: 10px;
-    color: white;
+    color: #aaa;
+    max-width: 30%;
+}
+
+.content-img {
+    width: 100%;
+    max-height: 200px;
+    margin-bottom: 10px;
 }

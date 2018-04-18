@@ -2,8 +2,8 @@
     'use strict';
 
     angular.module('starwars').directive('swCharacters', [
-        'RequestsFactory',
-        function (RequestsFactory) {
+        'UtilsService',
+        function (UtilsService) {
             return {
                 restrict: 'E',
                 scope: {
@@ -15,7 +15,19 @@
                         if (is.not.empty(characters)) {
                             console.log(characters)
                         }
-                    })
+                    });
+
+                    scope.getFormattedDate = function (date, format) {
+                        return UtilsService.getFormattedData(date, format);
+                    };
+
+                    scope.captalize = function (string) {
+                        return UtilsService.capitalize(string);
+                    };
+
+                    scope.getYearRelease = function (movie) {
+                        return moment(movie.release_date).format('YYYY');
+                    }
                 }
             };
         }
