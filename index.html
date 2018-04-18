@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="starwars">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<div ui-view></div>
+
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+<script src="node_modules/is_js/is.min.js"></script>
+<script src="node_modules/moment/moment.js"></script>
+<script src="src/app.js"></script>
+<script src="src/controllers/home.controller.js"></script>
+<script src="src/contants/constants.js"></script>
+<script src="src/factories/requests.factory.js"></script>
+<script src="src/directives/characters.directive.js"></script>
+<script src="src/directives/planets.directive.js"></script>
+<script src="src/directives/starships.directive.js"></script>
+<script src="src/directives/films.directive.js"></script>
+</body>
+</html>

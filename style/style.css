@@ -1,0 +1,25 @@
+body {
+    background-color: #222222;
+}
+.img-background {
+    width: 100%;
+}
+
+.bg-dark {
+    background-color: #303030!important;
+    color: #fff;
+}
+
+.navbar-dark .navbar-brand {
+    color: #aaa!important;
+    margin-left: 40px;
+    font-size: 28px;
+}
+
+.item-content {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #7B7C82;
+    border-radius: 10px;
+    color: white;
+}
